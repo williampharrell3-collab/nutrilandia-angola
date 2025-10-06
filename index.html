@@ -83,5 +83,46 @@
       window.open(url, '_blank');
     }
   </script>
+<!-- Botão flutuante do WhatsApp com animação e mensagem automática -->
+<a href="https://wa.me/244945712095?text=Ol%C3%A1!%20Tenho%20interesse%20em%20um%20produto%20da%20Nutril%C3%A2ndia%20Angola%20💪" 
+   class="whatsapp-float" 
+   target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" />
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  animation: pulse 2s infinite ease-in-out;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  margin-top: 10px;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+}
+
+/* Animação de pulsar suave */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+</style>
 </body>
 </html>
