@@ -1,0 +1,274 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nutrilândia Angola — Suplementos e Nutrição</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,Arial}
+    body{background:#f8f8f8;color:#111}
+    img{max-width:100%;display:block}
+
+    header{background:linear-gradient(90deg,#00b300,#003300);padding:18px;border-radius:10px;margin:20px auto;max-width:1100px;box-shadow:0 4px 16px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:space-between}
+    header h1{color:#fff;font-size:24px}
+    header p{color:#dcdcdc;font-size:14px}
+
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .hero{text-align:center;margin-bottom:30px}
+    .hero h2{font-size:28px;margin-bottom:10px;color:#0a0}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+    .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,0.08);transition:transform .2s}
+    .card:hover{transform:scale(1.02)}
+    .card img{height:240px;object-fit:cover}
+    .card h3{padding:10px;font-size:18px;color:#060;text-align:center}
+    .buy{display:flex;justify-content:center;padding:10px}
+    .buy button{background:#0a0;color:#fff;padding:10px 14px;border:none;border-radius:8px;font-weight:700;cursor:pointer;transition:background .2s}
+    .buy button:hover{background:#060}
+
+    footer{text-align:center;margin-top:40px;padding:20px;color:#555;font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Nutrilândia Angola</h1>
+      <p>Suplementos, vitaminas e produtos fitness</p>
+    </div>
+    <div style="text-align:right">
+      <div style="font-weight:700;color:#fff">WhatsApp</div>
+      <div style="color:#bdf">+244 945 712 095</div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h2>Alimente seus resultados 💪</h2>
+      <p>Os melhores suplementos do mercado — entrega rápida em todo o país.</p>
+    </section>
+
+    <section class="grid" id="produtos">
+      <div class="card">
+        <img src="https://i.postimg.cc/kg4fHXv3/IMG-20250821-WA0029.jpg" alt="Whey Protein">
+        <h3>Whey Protein</h3>
+        <div class="buy"><button onclick="comprar('Whey Protein')">Comprar no WhatsApp</button></div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/ZR99k6B1/IMG-20250821-WA0018.jpg" alt="Plant Protein">
+        <h3>Plant Protein</h3>
+        <div class="buy"><button onclick="comprar('Plant Protein')">Comprar no WhatsApp</button></div>
+      </div>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/x14b10D9/IMG-20250821-WA0032.jpg" alt="Muscletech">
+        <h3>Muscletech</h3>
+        <div class="buy"><button onclick="comprar('Muscletech')">Comprar no WhatsApp</button></div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="ano"></span> Nutrilândia Angola — todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script>
+    const WA_NUMBER = '+244945712095';
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    function comprar(produto){
+      const msg = `Olá! Tenho interesse em ${produto}. Ainda está disponível?`;
+      const url = `https://wa.me/${WA_NUMBER.replace(/\\+/g,'')}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+<!-- Botão flutuante do WhatsApp com animação e mensagem automática -->
+<a href="https://wa.me/244945712095?text=Ol%C3%A1!%20Tenho%20interesse%20em%20um%20produto%20da%20Nutril%C3%A2ndia%20Angola%20💪" 
+   class="whatsapp-float" 
+   target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="WhatsApp" />
+</a>
+
+<style>
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  animation: pulse 2s infinite ease-in-out;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.whatsapp-float img {
+  width: 40px;
+  margin-top: 10px;
+}
+
+.whatsapp-float:hover {
+  background-color: #20ba5a;
+  transform: scale(1.1);
+}
+
+/* Animação de pulsar suave */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+</style>
+</body>
+<!-- 🔹 MENU DE NAVEGAÇÃO FIXO -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <span>Nutrilândia <b>Angola</b></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="produtos.htm">Produtos</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="produtos" class="produtos-container">
+  <h2 class="titulo">Nossos Produtos</h2>
+
+  <div class="produtos-grid">
+
+    <!-- Card 1 -->
+    <div class="produto-card">
+      <img src="https://i.postimg.cc/kg4fHXv3/IMG-20250821-WA0029.jpg" alt="Produto 1">
+      <h3>Suplemento Whey Protein</h3>
+      <a href="https://wa.me/244945712095?text=Olá!%20Tenho%20interesse%20no%20Whey%20Protein%20da%20Nutrilândia%20Angola%20💪" class="btn-whatsapp" target="_blank">
+        Pedir no WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="produto-card">
+      <img src="https://i.postimg.cc/ZR99k6B1/IMG-20250821-WA0018.jpg" alt="Produto 2">
+      <h3>Plant Protein</h3>
+      <a href="https://wa.me/244945712095?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Creatina%20da%20Nutrilândia%20Angola%20🏋️" class="btn-whatsapp" target="_blank">
+        Pedir no WhatsApp
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="produto-card">
+      <img src="https://i.postimg.cc/x14b10D9/IMG-20250821-WA0032.jpg" alt="Produto 3">
+      <h3>Muscletech</h3>
+      <a href="https://wa.me/244945712095?text=Olá!%20Tenho%20interesse%20no%20BCAA%20da%20Nutrilândia%20Angola%20💊" class="btn-whatsapp" target="_blank">
+        Pedir no WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+<style>
+/* 🔹 CSS do MENU DE NAVEGAÇÃO 🔹 */
+.navbar {
+  background: linear-gradient(90deg,#00b300,#003300);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 25px;
+  border-radius: 10px;
+  max-width: 1090px;
+  margin: 20px auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.navbar .logo span {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #c4ffc4;
+}
+.produtos-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f7f8f9;
+}
+
+.titulo {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.produto-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.produto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.produto-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #222;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 18px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebd5a;
+}
+</style
+<section id="inicio" style="padding-top:100px; text-align:center;">
+  <h1>Bem-vindo à Nutrilândia Angola 💪</h1>
+  <p>Suplementos e produtos fitness de qualidade</p>
+</section>
+</html>
